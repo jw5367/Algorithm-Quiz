@@ -11,7 +11,7 @@ for(i = 0; i < num; i++){
  }
  const newValue = 
     value.filter(
-        (element, i) => element !== undefined
+        element => element !== undefined
       );
  console.log(newValue.join(''));
 }
