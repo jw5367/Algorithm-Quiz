@@ -1,20 +1,19 @@
 const fs = require('fs');
 const input = fs.readFileSync("./text.txt").toString().trim();
 
-let num = parseInt(input);
+let inputNum = parseInt(input);
 let result = 0;
 
-for(i = 0; i < num; i++){
+for(i = 0; i < inputNum; i++){
   let sum = 0;
-  let value = i;
-  let stringValue = value.toString();
+  let stringI = i.toString();
 
-  for(j = 0; j < stringValue.length; j++){
-    sum += parseInt(stringValue[j]);
+  for(j = 0; j < stringI.length; j++){
+    sum += parseInt(stringI[j]);
   }
-  sum += value;
-  if(sum == num){
-    result = value;
+  sum += i;
+  if(sum == inputNum){
+    result = i;
     break;
   }
 }
